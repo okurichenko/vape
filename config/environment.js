@@ -3,9 +3,22 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'vape',
+    podModulePrefix: 'vape/pods',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyAEE47d4eYoeMrEzslkgOiNRtKRSomgE_g",
+      authDomain: "vape-907de.firebaseapp.com",
+      databaseURL: "https://vape-907de.firebaseio.com",
+      storageBucket: "vape-907de.appspot.com",
+      messagingSenderId: "520999826333"
+    },
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

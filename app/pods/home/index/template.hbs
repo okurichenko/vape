@@ -1,0 +1,8 @@
+<ul>
+  {{#each model as |recipe|}}
+    {{#link-to 'home.recipe' recipe.id tagName='li'}}
+      <p>Recipe {{recipe.name}}</p>
+      <p class="text-muted">{{recipe.comment}}</p>
+    {{/link-to}}
+  {{/each}}
+</ul>

@@ -7,6 +7,7 @@ const {
 } = DS;
 
 export default Model.extend({
+  name: attr(),
   type: attr(),
   volume: attr(),
   pg: attr(),

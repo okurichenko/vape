@@ -1,9 +1,10 @@
-$font-size-base: 24px;
+$color-text-invert:         #fff;
+$font-size-base:            24px;
+
+@import "ember-bootstrap/bootstrap";
 
 @import "normalize";
 @import "variables";
 @import "mixins/mixins";
 
 @import "pod-styles";
-
-@import "ember-bootstrap/bootstrap";

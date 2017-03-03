@@ -12,4 +12,10 @@ export default function () {
     this.use('toLeft'),
     this.reverse('toRight')
   );
-};
+
+  this.transition(
+    this.toRoute('home.add-recipe'),
+    this.use('toDown'),
+    this.reverse('toUp')
+  );
+}

@@ -1,5 +1,15 @@
 & {
+  align-items: center;
   background: #000;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 1rem;
 
   @include size(100%, (100vh - $layout-default-height));
+
+  a {
+    color: $color-text-invert;
+    margin: 0 1rem;
+  }
 }

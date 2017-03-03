@@ -1,0 +1,17 @@
+& {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  position: relative;
+
+  .container-fluid {
+    overflow: auto;
+    padding: 0;
+
+    @include size(100%, $layout-default-height);
+
+    div {
+      min-height: 100%;
+    }
+  }
+}

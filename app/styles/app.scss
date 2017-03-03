@@ -1,3 +1,9 @@
+$font-size-base: 24px;
+
+@import "normalize";
+@import "variables";
+@import "mixins/mixins";
+
 @import "pod-styles";
 
 @import "ember-bootstrap/bootstrap";

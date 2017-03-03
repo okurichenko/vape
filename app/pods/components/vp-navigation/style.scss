@@ -1,0 +1,5 @@
+& {
+  background: #000;
+
+  @include size(100%, (100vh - $layout-default-height));
+}

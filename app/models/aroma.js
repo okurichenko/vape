@@ -8,4 +8,5 @@ const {
 export default Model.extend({
   vendor: attr(),
   name: attr(),
+  userId: attr(),
 });

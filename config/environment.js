@@ -1,6 +1,6 @@
 /* jshint node: true */
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   var ENV = {
     modulePrefix: 'vape',
     podModulePrefix: 'vape/pods',
@@ -8,11 +8,11 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     firebase: {
-      apiKey: "AIzaSyAEE47d4eYoeMrEzslkgOiNRtKRSomgE_g",
-      authDomain: "vape-907de.firebaseapp.com",
-      databaseURL: "https://vape-907de.firebaseio.com",
-      storageBucket: "vape-907de.appspot.com",
-      messagingSenderId: "520999826333"
+      apiKey: 'AIzaSyAEE47d4eYoeMrEzslkgOiNRtKRSomgE_g',
+      authDomain: 'vape-907de.firebaseapp.com',
+      databaseURL: 'https://vape-907de.firebaseio.com',
+      storageBucket: 'vape-907de.appspot.com',
+      messagingSenderId: '520999826333'
     },
     contentSecurityPolicy: {
       'style-src': "'self' 'unsafe-inline'",

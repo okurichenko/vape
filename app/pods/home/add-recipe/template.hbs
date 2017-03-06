@@ -1,1 +1,7 @@
 {{#link-to 'home' tagName='div'}}<i class="glyphicon glyphicon-chevron-left"></i> Back{{/link-to}}
+
+<form {{action 'save' on='submit'}}>
+  <div>{{input value=model.vendor}}</div>
+  <div>{{input value=model.name}}</div>
+  <button type="submit">Save</button>
+</form>

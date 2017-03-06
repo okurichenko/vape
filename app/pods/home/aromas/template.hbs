@@ -1,1 +1,7 @@
-{{outlet}}
+<h6 class="text-center">Aromas</h6>
+<hr>
+<ul>
+  {{#each model as |aroma|}}
+    <li>{{aroma.name}} ({{aroma.vendor}})</li>
+  {{/each}}
+</ul>

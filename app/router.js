@@ -12,6 +12,7 @@ Router.map(function () {
     this.route('add-recipe');
     this.route('aromas');
     this.route('stock');
+    this.route('add-aroma');
   });
 });
 

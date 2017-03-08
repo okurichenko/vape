@@ -18,4 +18,10 @@ export default function () {
     this.use('toDown'),
     this.reverse('toUp')
   );
+
+  this.transition(
+    this.toRoute('home.add-aroma'),
+    this.use('toDown'),
+    this.reverse('toUp')
+  );
 }

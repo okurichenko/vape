@@ -1,0 +1,20 @@
+<div class="header">
+  {{#link-to 'home.aromas' tagName='div' class='pull-left'}}
+    <div class="header-left">
+      {{fa-icon 'chevron-left'}}
+    </div>
+  {{/link-to}}
+  <h6 class="text-center">Add aroma</h6>
+</div>
+
+<hr>
+
+{{#bs-form model=model onSubmit=(action 'save') as |form|}}
+  {{form.element controlType='text' label='Vendor' placeholder='Vendor' property='vendor' required=true}}
+  {{form.element controlType='text' label='Name' placeholder='Name' property='name' required=true}}
+  {{form.element controlType='number' label='Volume' placeholder='Volume' property='volume' required=true}}
+
+  <br>
+
+  {{bs-button defaultText='Save' block=true type='success' buttonType='submit'}}
+{{/bs-form}}

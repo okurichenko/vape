@@ -1,7 +1,14 @@
-<h6 class="text-center">Aromas</h6>
+<div class="header">
+  <h6 class="text-center">Aromas</h6>
+  {{#link-to 'home.add-aroma' tagName='div' class='pull-right'}}
+    <div class="header-right">
+      {{fa-icon 'plus'}}
+    </div>
+  {{/link-to}}
+</div>
 <hr>
-<ul>
+<dl class="dl-horizontal">
   {{#each model as |aroma|}}
-    <li>{{aroma.name}} ({{aroma.vendor}})</li>
+    {{aroma-card aroma=aroma}}
   {{/each}}
-</ul>
+</dl>

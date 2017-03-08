@@ -1,0 +1,26 @@
+& {
+  display: flex;
+  flex-flow: row wrap;
+
+  dt {
+    flex: 0 0 80%;
+    width: 80%;
+  }
+
+  dd {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+}
+
+&.editing {
+  dt {
+    flex: 0 0 100%;
+    width: 80%;
+  }
+
+  dd {
+    flex: 0 0 0;
+    width: 0;
+  }
+}

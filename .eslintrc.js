@@ -15,6 +15,7 @@ module.exports = {
     camelcase: [2, { properties: 'never' }],
     'comma-spacing': [2, { before: false, after: true }],
     'comma-style': [2, 'last'],
+    'comma-dangle': ['error', 'always-multiline'],
     'computed-property-spacing': [2, 'never'],
     'consistent-this': 0,
     'eol-last': 2,

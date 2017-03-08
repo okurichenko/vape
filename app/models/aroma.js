@@ -6,7 +6,9 @@ const {
 } = DS;
 
 export default Model.extend({
-  vendor: attr(),
-  name: attr(),
+  vendor: attr('string'),
+  name: attr('string'),
+  volume: attr('number'),
+
   userId: attr(),
 });

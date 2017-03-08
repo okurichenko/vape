@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model() {
     return this.store.query('aroma', {
       orderBy: 'userId',
-      equalTo: this.get('session.currentUser.uid')
+      equalTo: this.get('session.currentUser.uid'),
     });
-  }
+  },
 });

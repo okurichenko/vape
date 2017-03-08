@@ -7,13 +7,15 @@ const {
 } = DS;
 
 export default Model.extend({
-  name: attr(),
-  type: attr(),
-  volume: attr(),
-  pg: attr(),
-  vg: attr(),
-  nicotine: attr(),
-  brew: attr(),
-  comment: attr(),
+  name: attr('string'),
+  type: attr('string'),
+  volume: attr('number'),
+  pg: attr('number'),
+  vg: attr('number'),
+  nicotine: attr('number'),
+  brew: attr('number'),
+  comment: attr('string'),
+
+  userId: attr(),
   aromas: hasMany('aroma-expend'),
 });

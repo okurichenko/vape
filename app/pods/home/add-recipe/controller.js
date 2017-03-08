@@ -6,6 +6,6 @@ export default Ember.Controller.extend({
       return this.get('model').save().then(() => {
         this.transitionToRoute('home.aromas');
       });
-    }
-  }
+    },
+  },
 });

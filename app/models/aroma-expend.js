@@ -7,7 +7,7 @@ const {
 } = DS;
 
 export default Model.extend({
-  volume: attr(),
+  volume: attr('number'),
 
   aroma: belongsTo('aroma'),
 });

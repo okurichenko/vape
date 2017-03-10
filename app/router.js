@@ -8,11 +8,14 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this.route('home', { path: '/' }, function () {
-    this.route('recipe', { path: '/recipe/:recipe_id' });
-    this.route('add-recipe');
-    this.route('aromas');
-    this.route('stock');
-    this.route('add-aroma');
+    this.route('recipes', function () {
+      this.route('add');
+      this.route('edit', { path: ':recipe_id' });
+    });
+    this.route('aromas', function () {
+      this.route('add');
+      this.route('edit', { path: ':aroma_id' });
+    });
   });
 });
 

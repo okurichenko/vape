@@ -8,7 +8,7 @@
 
   @include size(100%, (100vh - $layout-default-height));
 
-  a {
+  a, .btn.btn-link {
     color: $color-text-invert;
     margin: 0 1rem;
   }

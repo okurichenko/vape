@@ -1,0 +1,8 @@
+<label class="control-label col-md-4">{{label}}</label>
+<div class="col-md-8">
+  <select class="form-control" onchange={{action (mut value) target.value}}>
+    {{#each options as |option|}}
+      <option value="type" {{if (eq value option) 'selected="selected"'}}>{{option}}</option>
+    {{/each}}
+  </select>
+</div>

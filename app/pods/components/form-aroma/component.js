@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'li',
-  recipe: null,
+  onRemove: null,
+  onSubmit: null,
 });

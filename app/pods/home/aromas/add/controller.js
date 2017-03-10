@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     save() {
       return this.get('model').save().then(() => {
-        this.transitionToRoute('home.aromas');
+        this.transitionToRoute('home.aromas.index');
       });
     },
   },

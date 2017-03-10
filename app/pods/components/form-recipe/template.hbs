@@ -1,0 +1,32 @@
+{{#bs-form formLayout='horizontal' model=model onSubmit=onSubmit as |form|}}
+  {{form.element controlType='text' label='Name' placeholder='Name' property='name' required=true}}
+  <div class="form-group">
+    <label class="control-label col-md-4">Type</label>
+    <div class="col-md-8">
+      <select class="form-control" onchange={{action 'setType'}}>
+        {{#each typesOrdered as |type|}}
+          <option value={{type}} >{{type}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-md-4">Base</label>
+    <div class="col-md-8">
+      <select class="form-control" onchange={{action 'setBase'}}>
+        {{#each bases as |base|}}
+          <option value={{base.id}}>{{base.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+  {{form.element controlType='number' label='Volume, ml' placeholder='Volume, ml' property='volume' required=true}}
+  {{form.element controlType='number' label='Brew, h' placeholder='Brew, h' property='brew'}}
+  {{form.element controlType='textarea' label='Comment' placeholder='Comment' property='comment'}}
+  <br>
+
+  {{bs-button defaultText='Save' block=true type='success' buttonType='submit'}}
+  {{#unless model.isNew}}
+    {{bs-button defaultText='Remove' block=true type='danger' click=onRemove}}
+  {{/unless}}
+{{/bs-form}}

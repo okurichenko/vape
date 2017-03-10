@@ -1,0 +1,16 @@
+{{#layout-header}}
+  <h6 class="text-center">Aromas</h6>
+  {{#link-to 'home.aromas.add' tagName='div' class='pull-right'}}
+  <div class="header-right">
+    {{fa-icon 'plus'}}
+  </div>
+  {{/link-to}}
+{{/layout-header}}
+
+{{#layout-content}}
+  <dl class="dl-horizontal">
+    {{#each model as |aroma|}}
+      {{aroma-card aroma=aroma}}
+    {{/each}}
+  </dl>
+{{/layout-content}}

@@ -5,12 +5,13 @@
   position: relative;
 
   .container-fluid {
-    overflow: auto;
+    overflow: hidden;
 
     @include size(100%, $layout-default-height);
 
-    div {
-      min-height: 100%;
+    .liquid-container > .liquid-child > .liquid-container > .liquid-child {
+      display: flex;
+      flex-flow: column nowrap;
     }
   }
 }

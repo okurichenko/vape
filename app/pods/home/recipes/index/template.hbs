@@ -1,0 +1,16 @@
+{{#layout-header}}
+  <h6 class="text-center">Recipes</h6>
+  {{#link-to 'home.recipes.add' tagName='div' class='pull-right'}}
+    <div class="header-right">
+      {{fa-icon 'plus'}}
+    </div>
+  {{/link-to}}
+{{/layout-header}}
+
+{{#layout-content}}
+  <ul>
+    {{#each model as |recipe|}}
+      {{recipe-card recipe=recipe}}
+    {{/each}}
+  </ul>
+{{/layout-content}}

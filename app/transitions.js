@@ -7,20 +7,15 @@ export default function () {
   }
 
   this.transition(
-    this.fromRoute('home.index'),
-    this.toRoute('home.recipe'),
+    this.fromRoute('home.recipes'),
+    this.toRoute('home.aromas'),
     this.use('toLeft'),
     this.reverse('toRight')
   );
 
   this.transition(
-    this.toRoute('home.add-recipe'),
-    this.use('toDown'),
-    this.reverse('toUp')
-  );
-
-  this.transition(
-    this.toRoute('home.add-aroma'),
+    this.fromRoute(/^home\.(aromas|recipes)\.index/),
+    this.toRoute(/^home\.(aromas|recipes)\.(add|edit)/),
     this.use('toDown'),
     this.reverse('toUp')
   );

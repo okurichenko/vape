@@ -1,14 +1,4 @@
-{{#if editing}}
-  <dt>
-    {{#bs-form model=aroma onSubmit=(action 'save') as |form|}}
-      {{form.element controlType='text' label='Vendor' placeholder='Vendor' property='vendor' required=true}}
-      {{form.element controlType='text' label='Name' placeholder='Name' property='name' required=true}}
-      {{form.element controlType='number' label='Volume' placeholder='Volume' property='volume' required=true}}
-      {{bs-button defaultText='Save' block=true type='success' buttonType='submit'}}
-    {{/bs-form}}
-  </dt>
-  <dd></dd>
-{{else}}
-  <dt>{{aroma.vendor}} : {{aroma.name}}</dt>
-  <dd>{{aroma.volume}}ml</dd>
-{{/if}}
+{{#link-to 'home.aromas.edit' aroma.id tagName='dt'}}
+  {{aroma.vendor}} : {{aroma.name}}
+{{/link-to}}
+<dd>{{aroma.volume}}ml</dd>

@@ -1,0 +1,12 @@
+{{#layout-header}}
+  {{#link-to 'home.recipes.index' tagName='div' class='pull-left'}}
+    <div class="header-left">
+      {{fa-icon 'chevron-left'}}
+    </div>
+  {{/link-to}}
+  <h6 class="text-center">Add recipe</h6>
+{{/layout-header}}
+
+{{#layout-content}}
+  {{form-recipe model=recipe bases=bases onSubmit=(action 'save')}}
+{{/layout-content}}

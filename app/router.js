@@ -17,6 +17,8 @@ Router.map(function () {
       this.route('edit', { path: ':aroma_id' });
     });
   });
+  this.route('geo');
+  this.route('geo-quad');
 });
 
 export default Router;

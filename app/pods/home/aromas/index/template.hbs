@@ -1,16 +1,15 @@
 {{#layout-header}}
-  <h6 class="text-center">Aromas</h6>
-  {{#link-to 'home.aromas.add' tagName='div' class='pull-right'}}
+  <div class="header-left"></div>
+  <h5 class="header-title text-center">Aromas</h5>
   <div class="header-right">
-    {{fa-icon 'plus'}}
+    {{#link-to 'home.aromas.add' class='btn btn-link btn-block'}}
+      {{fa-icon 'plus'}}
+    {{/link-to}}
   </div>
-  {{/link-to}}
 {{/layout-header}}
 
 {{#layout-content}}
-  <dl class="dl-horizontal">
-    {{#each model as |aroma|}}
-      {{aroma-card aroma=aroma}}
-    {{/each}}
-  </dl>
+  {{#each model as |aroma|}}
+    {{aroma-card aroma=aroma}}
+  {{/each}}
 {{/layout-content}}

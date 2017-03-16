@@ -1,4 +1,7 @@
-{{#link-to 'home.aromas.edit' aroma.id tagName='dt'}}
-  {{aroma.vendor}} : {{aroma.name}}
+{{#link-to 'home.aromas.edit' aroma.id tagName='div' class="bg-primary well well-sm"}}
+  <div class="aroma-text">
+    <div class="aroma-text-name">{{aroma.name}}</div>
+    <div class="aroma-text-vendor">{{aroma.vendor}}</div>
+  </div>
+  <div class="aroma-volume">{{aroma.volume}}ml</div>
 {{/link-to}}
-<dd>{{aroma.volume}}ml</dd>

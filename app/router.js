@@ -17,6 +17,7 @@ Router.map(function () {
       this.route('edit', { path: ':aroma_id' });
     });
   });
+  this.route('sign-in');
 });
 
 export default Router;

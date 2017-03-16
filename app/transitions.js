@@ -19,4 +19,11 @@ export default function () {
     this.use('toDown'),
     this.reverse('toUp')
   );
+
+  this.transition(
+    this.fromRoute(/^home/),
+    this.toRoute(/^sign-in/),
+    this.use('toUp'),
+    this.reverse('toDown')
+  );
 }

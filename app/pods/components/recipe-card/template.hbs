@@ -1,3 +1,29 @@
-{{#link-to 'home.recipes.edit' recipe.id tagName='li'}}
-  {{recipe.name}}
+{{#link-to 'home.recipes.edit' recipe.id tagName='div' class="bg-primary well well-sm"}}
+  <h4>{{recipe.name}}</h4>
+  <div class="recipe-details">
+    <div class="dl-horizontal">
+      <div class="recipe-details-param">
+        <div>Type:</div>
+        <div>{{recipe.type}}</div>
+      </div>
+      <div class="recipe-details-param">
+        <div>Base:</div>
+        <div>{{recipe.eliquidBase.name}}</div>
+      </div>
+      <div class="recipe-details-param">
+        <div>Volume:</div>
+        <div>{{recipe.volume}}ml</div>
+      </div>
+      <div class="recipe-details-param">
+        <div>Brew:</div>
+        <div>{{recipe.brew}}h</div>
+      </div>
+    </div>
+    <div class="recipe-details-aromas">
+      {{#each recipe.aromas as |aromaExpend|}}
+        <span class="label label-success">{{aromaExpend.aroma.name}}</span>
+      {{/each}}
+    </div>
+  </div>
 {{/link-to}}
+

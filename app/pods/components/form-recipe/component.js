@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  store: Ember.inject.service(),
+
   types: [
     'test',
     'control',
@@ -29,8 +31,23 @@ export default Ember.Component.extend({
   },
 
   actions: {
+    addAromaExpend() {
+      const aromaExpend = this.get('store').createRecord('aromaExpend');
+      const model = this.get('model');
+      model.get('aromas').pushObject(aromaExpend);
+    },
+
+    removeAromaExpend(aromaExpend) {
+      this.get('model.aromas').removeObject(aromaExpend);
+    },
+
     setBase(event) {
       this.set('model.eliquidBase', this.get('bases').findBy('id', event.target.value));
+    },
+
+    setAroma(aromaExpend, option) {
+      const selectedAroma = this.get('aromas').findBy('id', option);
+      aromaExpend.set('aroma', selectedAroma);
     },
 
     setType(event) {

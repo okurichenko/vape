@@ -1,0 +1,32 @@
+& {
+  .well {
+    background-color: #337ab7!important;
+  }
+
+  .dl-horizontal {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+
+  .recipe-details-param {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+    div:first-of-type {
+      min-width: 50%;
+    }
+  }
+
+  h4 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+  }
+
+  .recipe-details-aromas {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #fff
+  }
+}

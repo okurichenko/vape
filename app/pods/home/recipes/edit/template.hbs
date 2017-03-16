@@ -1,12 +1,13 @@
 {{#layout-header}}
-  {{#link-to 'home.recipes.index' tagName='div' class='pull-left'}}
-    <div class="header-left">
+  <div class="header-left">
+    {{#link-to 'home.recipes.index' class="btn btn-link btn-block"}}
       {{fa-icon 'chevron-left'}}
-    </div>
-  {{/link-to}}
-  <h6 class="text-center">Edit recipe</h6>
+    {{/link-to}}
+  </div>
+  <h5 class="header-title text-center">Edit recipe</h5>
+  <div class="header-right"></div>
 {{/layout-header}}
 
 {{#layout-content}}
-  {{form-recipe model=recipe bases=bases onSubmit=(action 'save') onRemove=(action 'remove')}}
+  {{form-recipe model=recipe aromas=aromas bases=bases onSubmit=(action 'save') onRemove=(action 'remove')}}
 {{/layout-content}}

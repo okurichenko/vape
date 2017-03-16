@@ -1,6 +1,12 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'torii/routing/authenticated-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin, {
+  actions: {
+    accessDenied() {
+      this.transitionTo('sign-in');
+    },
+  },
   /*
   model() {
     return this.store.findAll('eliquid-base').then((bases) => {

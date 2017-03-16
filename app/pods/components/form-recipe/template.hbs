@@ -21,6 +21,36 @@
     </div>
   </div>
   {{form.element controlType='number' label='Volume, ml' placeholder='Volume, ml' property='volume' required=true}}
+  <hr>
+  <h4>Aromas expends</h4>
+  {{#each model.aromas as |aromaExpend i|}}
+    <div class="form-group">
+      <div class="col-xs-8">
+        {{#x-select value=aromaExpend.aroma.id on-change=(action 'setAroma' aromaExpend) classNames='form-control' as |xs|}}
+          {{#xs.option value=false}}Select{{/xs.option}}
+          {{#each aromas as |aroma|}}
+            {{#xs.option value=aroma.id}}{{aroma.name}}{{/xs.option}}
+          {{/each}}
+        {{/x-select}}
+      </div>
+      <div class="col-xs-2">
+        {{input type="text" value=aromaExpend.volume class="form-control"}}
+      </div>
+      <div class="col-xs-2">
+        {{#if (gt model.aromas.length 1)}}
+          {{#bs-button type="danger" block=true click=(action "removeAromaExpend" aromaExpend)}}{{fa-icon "minus"}}{{/bs-button}}
+        {{/if}}
+      </div>
+    </div>
+  {{/each}}
+  <hr>
+  <div class="form-group">
+    <div class="col-xs-6 col-xs-offset-3">
+      {{#bs-button type="success" click=(action "addAromaExpend") block=true}}
+        {{fa-icon 'plus'}}   Add aroma
+      {{/bs-button}}
+    </div>
+  </div>
   {{form.element controlType='number' label='Brew, h' placeholder='Brew, h' property='brew'}}
   {{form.element controlType='textarea' label='Comment' placeholder='Comment' property='comment'}}
   <br>

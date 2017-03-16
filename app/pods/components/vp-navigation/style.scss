@@ -10,6 +10,12 @@
 
   a, .btn.btn-link {
     color: $color-text-invert;
-    margin: 0 1rem;
+    padding: 1.9rem;
+    transition: color 200ms ease;
+
+    &.active {
+      color: $color-text-invert-active;
+      transition: color 200ms ease;
+    }
   }
 }

@@ -1,8 +1,2 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-12">
-      {{yield}}
-    </div>
-  </div>
-</div>
-{{vp-navigation signIn=signIn signOut=signOut}}
+{{yield}}
+{{vp-navigation signOut=(action signOut)}}

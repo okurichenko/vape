@@ -10,6 +10,10 @@ export default Route.extend({
     return hash({
       recipe: this.store.findRecord('recipe', params.recipe_id),
       bases: this.store.findAll('eliquid-base'),
+      aromas: this.store.query('aroma', {
+        orderBy: 'userId',
+        equalTo: this.get('session.currentUser.uid'),
+      }),
     });
   },
 

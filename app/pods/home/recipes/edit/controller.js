@@ -2,25 +2,32 @@ import Ember from 'ember';
 
 const {
   Controller,
-  RSVP: { resolve },
+  RSVP: { resolve, all },
 } = Ember;
 
 export default Controller.extend({
   actions: {
     save() {
-      return this.get('recipe').save().then(() => {
-        this.transitionToRoute('home.recipes.index');
+      const aromaPromises = this.get('recipe.aromas').map(a => a.save());
+
+      return all(aromaPromises).then(() => {
+        this.get('recipe').save().then(() => {
+          this.transitionToRoute('home.recipes.index');
+        });
       });
     },
 
     remove() {
-      let promise = resolve();
       if (window.confirm('Do you want to remove recipe?')) {
-        promise = this.get('recipe').destroyRecord();
+        const aromaExpendPromises = this.get('recipe.aromas').map(a => a.destroyRecord());
+
+        return all(aromaExpendPromises).then(() => {
+          return this.get('recipe').destroyRecord().then(() => {
+            this.transitionToRoute('home.recipes.index');
+          });
+        });
       }
-      return promise.then(() => {
-        this.transitionToRoute('home.recipes.index');
-      });
+      return resolve();
     },
   },
 });

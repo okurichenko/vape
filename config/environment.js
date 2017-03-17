@@ -5,8 +5,8 @@ module.exports = function (environment) {
     modulePrefix: 'vape',
     podModulePrefix: 'vape/pods',
     environment: environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '',
+    defaultLocationType: 'hash',
     firebase: {
       apiKey: 'AIzaSyAEE47d4eYoeMrEzslkgOiNRtKRSomgE_g',
       authDomain: 'vape-907de.firebaseapp.com',
@@ -37,6 +37,10 @@ module.exports = function (environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    cordova: {
+      rebuildOnChange: false,
+      emulate: false
     }
   };
 
